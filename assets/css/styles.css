@@ -1,0 +1,278 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "destacados destacados"
+    "aside main"
+    "footer footer";
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 5rem auto auto 5rem;
+    background-color: #202020;
+}
+
+
+/* header */
+.logo img{
+    height: 30px;
+    width: 30px;
+}
+
+.marca{
+    width: 170px;
+}
+
+header{
+    grid-area: header;
+    background-color: #262935;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+/* aside */
+aside{
+    grid-area: aside;
+    background-color: #202020;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: large;    
+}
+
+aside li{
+    list-style: none;
+}
+
+nav{
+  margin: 1rem;
+  background-color: #41465a;
+  border-radius: 10%;
+  color: white;
+}
+
+#link{
+  list-style: none;
+  text-decoration: none;
+}
+a:visited{
+  color: white;
+}
+
+.cat{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 200px;
+  padding-left: 1rem;
+}
+
+aside a:hover{
+  color: rgb(81, 134, 31);
+}
+
+aside h4:hover{
+  color: rgb(81, 134, 31);
+}
+
+.aside_hr{
+  padding: 0;
+  margin: 0;
+  width: 50%;
+}
+
+/* main */
+main{
+    grid-area: main;
+    background-color: #202020;
+    padding-top: 16px;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*SLIDER*/
+.slider{
+  width: 80%;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider .slide-track{
+  display: flex;
+  animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 40s linear infinite;;
+  width: calc(200px *20);
+}
+
+.slide .slide{
+  width: 200px;
+}
+
+.slider .slide img{
+  width: 100%;
+}
+
+@keyframes scroll {
+  0%{
+    -webkit-transform:translateX(0);
+    transform: translateX(0);
+  }
+  100%{
+    -webkit-transform:translateX(calc(-200px *10));
+    transform: translateX(calc(-200px *10));
+  }
+}
+
+/*GRID GAME*/
+.gridcont_2{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    gap: 16px; 
+    padding-bottom: 16px;
+}
+
+.gridcont_3{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0px, 1fr));
+    gap: 16px;  
+    padding-bottom: 16px;
+}
+
+.gridcont_4{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0px, 1fr));
+  gap: 16px;
+  padding-bottom: 16px;
+}
+
+/*GAME CONTAINERS*/
+.game {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; /* Proporción 16:9 para el contenedor (ajustable según la relación de aspecto del video) */
+    overflow: hidden;
+    background-color: black;
+}
+  
+  .imagen, .video {
+    width: 100%;
+    object-fit: cover; /* Para asegurarse de que la imagen o el video cubran todo el contenedor */
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+
+  .video {
+    display: none;
+  }
+
+  .main_container{
+    width: 80%;
+    margin: 0 auto; /*centrar grid*/
+  }
+
+  .game_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat_container{
+    position:absolute;
+    display: flex;
+    width: 100%;
+    height: 15%;
+    justify-content:end;
+    flex-direction: row;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(18, 20, 27, 0.8);
+  }
+
+  .stat_container i,p,h3{
+      padding-right: 1em;
+      font-size: 1em; /* Tamaño del texto relativo al tamaño de fuente del elemento padre */
+      margin: 0; /* Elimina el margen por defecto del párrafo */
+      margin: auto 0;
+      max-width: 100%; /* Para asegurar que el texto no se desborde del contenedor */
+    }
+  
+  #stat_img{
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 1px solid black;
+  }
+  
+  .game_stat{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .gamename{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    opacity: 0;
+    max-width: 60%;
+    text-align: end;
+    text-wrap: wrap;
+    font-size: 80%;
+  }
+  .stat_0 p{
+    color: rgb(29, 228, 10);
+  
+  }
+  hr{
+    background-color: #7d7e83;
+    width: 75%;
+  }
+
+  /*HOVER MAIN*/
+  .game:hover{
+    scale: 1.4;
+    transition: 1.5s ease-in;
+    z-index: 1;
+  }
+
+  .game:hover .video{
+    display: block; /* Mostrar el contenedor */
+}
+    .game:hover #stat_img{
+    opacity: 1; /* Mostrar el contenedor */
+    z-index: 1;
+}   
+    .game:hover .gamename{
+    opacity: 1; /* Mostrar el contenedor */
+    z-index: 1;
+    font-size: 100%;
+} 
+  .game:hover .imagen {
+    display: none; /* Ocultar  el contenedor */    
+  }
+  .game:hover .stat_0 {
+    opacity: 0; /* Ocultar  el contenedor */    
+  }
+
+/*main lucha*/
+
+.lucha{
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* footer */
+footer{
+    grid-area: footer;
+    background-color: #262935;
+}
+
+
+
+
+
