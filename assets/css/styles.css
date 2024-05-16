@@ -60,6 +60,10 @@ a:visited{
   color: white;
 }
 
+a{
+  color: white;
+}
+
 .cat{
   display: flex;
   flex-direction: column;
