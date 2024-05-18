@@ -20,31 +20,54 @@
       <div>
         <img src="./assets/img/MARCA.png" alt="" class="marca" />
       </div>
-
       <div>
         <img src="./assets/img/pressstart.gif" alt="" style="width: 300px" />
       </div>
     </header>
 
+    <!--aside-->
     <aside>
     <nav>
       <div class="cat">
         <h3>CATEGORÍAS</h3>
+          <a href="#ofertas" id="link">Ofertas</a>
           <a href="#accion" id="link">Acción</a>
           <a href="#lucha" id="link">Lucha</a>
           <br>
           <hr class="aside_hr">
-        <a href="#footer" id="link"><h4>CONTÁCTANOS</h4></a>
+        <a href="#footer" id="link"><h4>SÍGUENOS</h4></a>
       </div>
     </nav>
     </aside>
+    <!--Ofertas-->
+    <section class="ofertas">
+    <div class="ofertdesc">
+      <img src="./assets/img/rebajas.png" alt="" style="width: 300px">
+    </div>
+
+      <div class="ofertcont">
+        <article class="oferta1" id="card">
+        <img src="./assets/img/The-Witcher-III-Wild-Hunt.jpg" alt="">
+        <img src="./assets/img/pngwing.com.png" alt="">
+      </article>
+      <div class="bt1">
+        <div class="precio">
+          <del>$19.990</del><p>$9.900</p>
+        </div> 
+        <div>
+          <button>Añadir al carro</button>
+        </div>
+    </div>
+    </div>
+
+    </section>
 
     <main>
-      <!-- JUEGOS ACCION -->
       <div class="main_container">
         <div>
             <H2 style="text-align: center;">ENCUENTRA LOS MEJORES JUEGOS PARA PC</H2>
         </div>
+        <!-- Slider imagenes -->
         <div class="slider">
             <div class="slide-track">
                 <div class="slide">
@@ -113,8 +136,10 @@
         <br>
         <hr>
         <div>
+          <!-- titulos acción -->
           <h2 id="accion">TÍTULOS POPULARES DE ACCIÓN</h2>
         </div>
+        <div class="main-grid-container">
         <div class="gridcont_2">
           <div class="game">
             <img
@@ -142,9 +167,6 @@
                 <div class="gamename">
                   <h3>HELLDIVERS 2</h3>
                 </div>
-                <div class="stat_0">
-                    <h3>HELLDIVERS 2</h3>
-                  </div>
                 <div class="stat_0">
                   <i
                     class="fa-brands fa-windows fa-2x"
@@ -180,9 +202,6 @@
                 <div class="gamename">
                   <h3>Grand Theft Auto V</h3>
                 </div>
-                <div class="stat_0">
-                    <h3>Grand Theft Auto V</h3>
-                  </div>
                 <div class="stat_0">
                   <i
                     class="fa-brands fa-windows fa-2x"
@@ -225,9 +244,6 @@
                   <h3>Cyberpunk 2077</h3>
                 </div>
                 <div class="stat_0">
-                    <h3>Cyberpunk 2077</h3>
-                  </div>
-                <div class="stat_0">
                   <i
                     class="fa-brands fa-windows fa-2x"
                     style="color: #f3f1f1"
@@ -263,9 +279,6 @@
                   <h3>Diablo IV</h3>
                 </div>
                 <div class="stat_0">
-                    <h3>Diablo IV</h3>
-                  </div>
-                <div class="stat_0">
                   <i
                     class="fa-brands fa-windows fa-2x"
                     style="color: #f3f1f1"
@@ -300,9 +313,6 @@
                   <h3>Call of Duty: Warzone</h3>
                 </div>
                 <div class="stat_0">
-                    <h3>Call of Duty: Warzone</h3>
-                  </div>
-                <div class="stat_0">
                   <i
                     class="fa-brands fa-windows fa-2x"
                     style="color: #f3f1f1"
@@ -315,141 +325,19 @@
             </div>
           </div>
         </div>
-      </div>
-      <br />
-      <hr />
-      <br />
-      <!-- juegos de lucha -->
-      <div class="lucha" id="lucha">
-        <div>
-          <h2>TÍTULOS POPULARES DE LUCHA</h2>
+      
         </div>
-        <div class="gridcont_3">
-          <div class="game">
-            <img src="./assets/img/stick.jpg" alt="Imagen" class="imagen" />
-            <video
-              src="./assets/video/stick.mp4"
-              class="video"
-              muted
-              autoplay
-              loop
-            ></video>
-            <div>
-              <img
-                src="./assets/img/stick.jpg"
-                alt="Imagen"
-                style="max-width: 40%; height: auto"
-                id="stat_img"
-              />
-            </div>
-            <div class="game_stat">
-              <div class="stat_container">
-                <div class="gamename">
-                  <h3 style="background-color: black 0.5">
-                    Stick Fight: The Game
-                  </h3>
-                </div>
-                <div class="stat_0">
-                    <h3>Stick Fight: The Game</h3>
-                  </div>
-                <div class="stat_0">
-                  <i
-                    class="fa-brands fa-windows fa-2x"
-                    style="color: #f3f1f1"
-                  ></i>
-                </div>
-                <div class="stat_0">
-                  <p>CLP $2.600</p>
-                </div>
-              </div>
-            </div>
+        <br />
+        <hr />
+        <br />
+        <!-- titulos de lucha -->
+        <div class="lucha" id="lucha">
+          <div>
+            <h2>TÍTULOS POPULARES DE LUCHA</h2>
           </div>
-          <div class="game">
-            <img
-              src="./assets/img/brawlhalla.jpg"
-              alt="Imagen"
-              class="imagen"
-            />
-            <video
-              src="./assets/video/Brawlhalla.mp4"
-              class="video"
-              muted
-              autoplay
-              loop
-            ></video>
-            <div>
-              <img
-                src="./assets/img/brawlhalla.jpg"
-                alt="Imagen"
-                style="max-width: 40%; height: auto"
-                id="stat_img"
-              />
-            </div>
-            <div class="game_stat">
-              <div class="stat_container">
-                <div class="gamename">
-                  <h3>Brawlhalla</h3>
-                </div>
-                <div class="stat_0">
-                    <h3>Brawlhalla</h3>
-                  </div>
-                <div class="stat_0">
-                  <i
-                    class="fa-brands fa-windows fa-2x"
-                    style="color: #f3f1f1"
-                  ></i>
-                </div>
-                <div class="stat_0">
-                  <p>Gratuito</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="game">
-            <img
-              src="./assets/img/mortalkombat.jpg"
-              alt="Imagen"
-              class="imagen"
-            />
-            <video
-              src="./assets/video/warzone.mp4"
-              class="video"
-              muted
-              autoplay
-              loop
-            ></video>
-            <div>
-              <img
-                src="./assets/img/mortalkombat.jpg"
-                alt="Imagen"
-                style="max-width: 40%; height: auto"
-                id="stat_img"
-              />
-            </div>
-            <div class="game_stat">
-              <div class="stat_container">
-                <div class="gamename">
-                  <h3>Mortal Kombat 1</h3>
-                </div>
-                <div class="stat_0">
-                  <h3>Mortal Kombat 1</h3>
-                </div>
-                <div class="stat_0">
-                  <i
-                    class="fa-brands fa-windows fa-2x"
-                    style="color: #f3f1f1"
-                  ></i>
-                </div>
-                <div class="stat_0">
-                  <p>$40.999</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="gridcont_2">
-          <div class="game">
+          <div class="main-grid-container">
+            <div class="gridcont_2">
+              <div class="game">
             <img src="./assets/img/dbz.jpg" alt="Imagen" class="imagen" />
             <video
               src="./assets/video/dbz.mp4"
@@ -471,9 +359,6 @@
                 <div class="gamename">
                   <h3>DRAGON BALL FighterZ</h3>
                 </div>
-                <div class="stat_0">
-                    <h3>DRAGON BALL FighterZ</h3>
-                  </div>
                 <div class="stat_0">
                   <i
                     class="fa-brands fa-windows fa-2x"
@@ -513,9 +398,6 @@
                   <h3>Street Fighter 6</h3>
                 </div>
                 <div class="stat_0">
-                    <h3>Street Fighter 6</h3>
-                  </div>
-                <div class="stat_0">
                   <i
                     class="fa-brands fa-windows fa-2x"
                     style="color: #f3f1f1"
@@ -527,10 +409,144 @@
               </div>
             </div>
           </div>
-        </div>
+            </div>
+            <div class="gridcont_3">
+          <div class="game">
+            <img src="./assets/img/stick.jpg" alt="Imagen" class="imagen" />
+            <video
+              src="./assets/video/stick.mp4"
+              class="video"
+              muted
+              autoplay
+              loop
+            ></video>
+            <div>
+              <img
+                src="./assets/img/stick.jpg"
+                alt="Imagen"
+                style="max-width: 40%; height: auto"
+                id="stat_img"
+              />
+            </div>
+            <div class="game_stat">
+              <div class="stat_container">
+                <div class="gamename">
+                  <h3 style="background-color: black 0.5">
+                    Stick Fight: The Game
+                  </h3>
+                </div>
+                <div class="stat_0">
+                  <i
+                    class="fa-brands fa-windows fa-2x"
+                    style="color: #f3f1f1"
+                  ></i>
+                </div>
+                <div class="stat_0">
+                  <p>CLP $2.600</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="game">
+            <img
+              src="./assets/img/brawlhalla.jpg"
+              alt="Imagen"
+              class="imagen"
+            />
+            <video
+              src="./assets/video/Brawlhalla.mp4"
+              class="video"
+              muted
+              autoplay
+              loop
+            ></video>
+            <div>
+              <img
+                src="./assets/img/brawlhalla.jpg"
+                alt="Imagen"
+                style="max-width: 40%; height: auto"
+                id="stat_img"
+              />
+            </div>
+            <div class="game_stat">
+              <div class="stat_container">
+                <div class="gamename">
+                  <h3>Brawlhalla</h3>
+                </div>
+                <div class="stat_0">
+                  <i
+                    class="fa-brands fa-windows fa-2x"
+                    style="color: #f3f1f1"
+                  ></i>
+                </div>
+                <div class="stat_0">
+                  <p>Gratuito</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="game">
+            <img
+              src="./assets/img/mortalkombat.jpg"
+              alt="Imagen"
+              class="imagen"
+            />
+            <video
+              src="./assets/video/warzone.mp4"
+              class="video"
+              muted
+              autoplay
+              loop
+            ></video>
+            <div>
+              <img
+                src="./assets/img/mortalkombat.jpg"
+                alt="Imagen"
+                style="max-width: 40%; height: auto"
+                id="stat_img"
+              />
+            </div>
+            <div class="game_stat">
+              <div class="stat_container">
+                <div class="gamename">
+                  <h3>Mortal Kombat 1</h3>
+                </div>
+                <div class="stat_0">
+                  <i
+                    class="fa-brands fa-windows fa-2x"
+                    style="color: #f3f1f1"
+                  ></i>
+                </div>
+                <div class="stat_0">
+                  <p>$40.999</p>
+                </div>
+              </div>
+            </div>
+          </div>
+            </div>
+          </div>
       </div>
     </main>
-
-    <footer id="footer"></footer>
+      <!-- Footer -->
+    <footer id="footer">
+      <div class="footer-container">
+        <div>
+          <img src="./assets/img/MARCA.png" alt="" class="marca" />
+        </div>
+        <div>
+          <p>©Fakesteam Corporation. Todos los derechos reservados</p>
+        </div>
+            
+      </div> 
+      <div class="iconos-rrss">
+        <i class="fa-brands fa-facebook fa-2x" style="color: #d9dee8;"></i>
+        <i class="fa-brands fa-instagram fa-2x" style="color: #d9dee8;"></i>
+      </div> 
+      </div>
+  
+     
+    
+    </footer>
+    
   </body>
 </html>

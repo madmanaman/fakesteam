@@ -1,28 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-    margin: 0;
-    padding: 0;
     display: grid;
     grid-template-areas: 
     "header header"
-    "destacados destacados"
+    "ofertas ofertas"
     "aside main"
     "footer footer";
     grid-template-columns: 15% 85%;
-    grid-template-rows: 5rem auto auto 5rem;
+    grid-template-rows: 5rem auto auto 8rem;
     background-color: #202020;
 }
-
 
 /* header */
 .logo img{
     height: 30px;
     width: 30px;
 }
-
 .marca{
     width: 170px;
 }
-
 header{
     grid-area: header;
     background-color: #262935;
@@ -40,55 +40,40 @@ aside{
     font-family:Arial, Helvetica, sans-serif;
     font-size: large;    
 }
-
-aside li{
-    list-style: none;
-}
-
 nav{
   margin: 1rem;
   background-color: #41465a;
   border-radius: 10%;
   color: white;
 }
-
-#link{
+a{
   list-style: none;
   text-decoration: none;
+  color: white;
+  padding-left: 1rem;
 }
 a:visited{
   color: white;
 }
-
+.cat h3{
+  margin: 1em;
+}
 .cat{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 200px;
-  padding-left: 1rem;
+  height: auto;
+  padding: 1rem;
 }
-
 aside a:hover{
   color: rgb(81, 134, 31);
 }
-
 aside h4:hover{
   color: rgb(81, 134, 31);
 }
-
 .aside_hr{
-  padding: 0;
-  margin: 0;
+  margin-bottom: 1em;
   width: 50%;
-}
-
-/* main */
-main{
-    grid-area: main;
-    background-color: #202020;
-    padding-top: 16px;
-    color: white;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /*SLIDER*/
@@ -124,30 +109,32 @@ main{
     transform: translateX(calc(-200px *10));
   }
 }
-
-/*GRID GAME*/
+/* main */
+main{
+  grid-area: main;
+  background-color: #202020;
+  padding-top: 16px;
+  color: white;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+main h2{
+  padding-bottom: 1rem;
+}
+/*GRID MAIN GAME*/
 .gridcont_2{
     display: grid;
-    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 16px; 
     padding-bottom: 16px;
 }
 
 .gridcont_3{
     display: grid;
-    grid-template-columns: repeat(3, minmax(0px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 16px;  
     padding-bottom: 16px;
 }
-
-.gridcont_4{
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0px, 1fr));
-  gap: 16px;
-  padding-bottom: 16px;
-}
-
-/*GAME CONTAINERS*/
+/*MAIN GAME CONTAINERS*/
 .game {
     position: relative;
     width: 100%;
@@ -156,7 +143,6 @@ main{
     overflow: hidden;
     background-color: black;
 }
-  
   .imagen, .video {
     width: 100%;
     object-fit: cover; /* Para asegurarse de que la imagen o el video cubran todo el contenedor */
@@ -164,17 +150,13 @@ main{
     top: 0;
     left: 0;
   }
-
-
   .video {
     display: none;
   }
-
   .main_container{
     width: 80%;
     margin: 0 auto; /*centrar grid*/
   }
-
   .game_container {
     display: flex;
     flex-direction: column;
@@ -192,15 +174,13 @@ main{
     left: 0;
     background-color: rgba(18, 20, 27, 0.8);
   }
-
   .stat_container i,p,h3{
       padding-right: 1em;
-      font-size: 1em; /* Tamaño del texto relativo al tamaño de fuente del elemento padre */
-      margin: 0; /* Elimina el margen por defecto del párrafo */
+      font-size: 1em; 
+      margin: 0; 
       margin: auto 0;
-      max-width: 100%; /* Para asegurar que el texto no se desborde del contenedor */
-    }
-  
+      max-width: 100%; 
+  }
   #stat_img{
     opacity: 0;
     position: absolute;
@@ -208,12 +188,10 @@ main{
     left: 0;
     border: 1px solid black;
   }
-  
   .game_stat{
     display: flex;
     flex-direction: column;
-  }
-  
+  } 
   .gamename{
     padding: 0;
     margin: 0;
@@ -261,18 +239,230 @@ main{
 
 /*main lucha*/
 
-.lucha{
+/*ofetas*/
+/*articulos*/
+.ofertas{
+  grid-area: ofertas;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
   width: 80%;
   margin: 0 auto;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('../img/bAV.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-top: 1rem;
+}
+.ofertas::before {
+  content: "";
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%; /* Ajusta esta altura según el grado de oscurecimiento deseado */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+}
+.ofertcont{
+  display: flex;
+  flex-direction: column;
+  background-color: #41465a;
+  padding: 4px;
+}
+
+.ofertcont button{
+height: 30px;
+color: white;
+background-color: #46b911;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+border-radius: 5%;
+border-color: rgba(0, 0, 0, 0.5);
+border-style: solid;
+border-width: 2px;
+margin-top: 1rem;
+font-size: medium;
+}
+
+.bt1{
+  display: flex;
+  flex-direction: row;
+  color: white;
+  font-size: x-large;
+  justify-content: space-evenly;
+  align-items: center;
+  text-shadow: 2px 2px 2px black;
+  height: 4rem;
+  margin-top: 1rem;
+}
+del{
+  font-size: small;
+}
+#card {
+  position: relative;
+  width: 250px;
+  transition: all .3s ease;
+}
+
+#card img:first-child{
+  box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+  border-radius: 4px;
+  object-fit: cover;
+  width: 100%;
+}
+
+#card img:last-child{
+  position: absolute;
+  width: 200px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(25%);
+  transition: .3s ease;
+  opacity: 0;
+}
+
+/*animacion aticulos oferta*/
+#card:hover{
+  transform: 
+    perspective(250px)
+    rotateX(10deg)
+    translateY(-5%)
+    translateZ(0);
+}
+#card::before{
+  content:'';
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 5%,
+    rgba(0, 0, 0, 0.5) 30%,
+    rgba(0, 0, 0) 95%
+  ) ;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+#card:hover::before{
+  opacity: 1 ;
+}
+#card:hover img:last-child {
+  opacity: 1;
+  transform: translateY(10%);
+}
+button:hover{
+  scale: 1.1;
 }
 
 /* footer */
 footer{
     grid-area: footer;
     background-color: #262935;
+    color: white;
+}
+footer img{
+  filter: grayscale(80%);
+  padding-right: 1rem;
+}
+footer .marca{
+  width: 100px;
+}
+.footer-container{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+footer i{
+  padding-right: 2rem;
+}
+.iconos-rrss{
+  position: absolute;
+  width: 100%;
+  padding-top: 1rem;
+  justify-content: center;
+  align-items: center;  
+  display: flex;
+}
+
+.iconos-rrss i{
+  animation-name: gira;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite ;
+  animation-timing-function: linear;
+  display: inline-block;
+}
+
+@keyframes gira{
+
+  From{
+    transform: rotate(0deg);
+  }to{
+    transform:rotate(360deg);
+  }
+}
+
+.iconos-rrss i:hover{
+  animation:none;
+  scale: 1.2;
 }
 
 
+@media (max-width: 992px){
+  body {
+      display: grid;
+      grid-template-areas:
+      "header   header"
+      "aside    aside"
+      "ofertas  ofertas"
+      "main     main"
+      "footer   footer";
+      grid-template-rows: 5rem auto auto auto 8rem;
+    }
+}
 
+@media (max-width: 670px){
 
+  .ofertas{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  /* #card:hover {
+    display: none;
+  }
+  #card::before{
+    display: none;
+  }
+  #card:hover::before {
+    display: none;
+  }
+  #card:hover img:last-child {
+    display: none;
+  } 
+  button:hover {
+    display: none;
+  }
+  .footer-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .oferta1:last-child{
+    display: none; */
+  }
+  .game:hover{
+    scale: 1;
+    transition: 1.5s ease-in;
+    z-index: 1;
+  }
 
+}
