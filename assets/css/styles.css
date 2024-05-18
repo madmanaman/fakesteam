@@ -437,32 +437,18 @@ footer i{
       flex-direction: column;
       align-items: center;
   }
-  /* #card:hover {
-    display: none;
-  }
-  #card::before{
-    display: none;
-  }
-  #card:hover::before {
-    display: none;
-  }
-  #card:hover img:last-child {
-    display: none;
-  } 
-  button:hover {
-    display: none;
-  }
+   
   .footer-container{
     display: flex;
     flex-direction: column;
   }
-  .oferta1:last-child{
-    display: none; */
-  }
+
   .game:hover{
     scale: 1;
     transition: 1.5s ease-in;
     z-index: 1;
   }
-
+  .press{
+    display: none;
+  }
 }
