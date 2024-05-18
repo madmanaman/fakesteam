@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
     display: grid;
     grid-template-areas: 
@@ -393,7 +394,7 @@ footer i{
   display: flex;
 }
 
-.iconos-rrss i{
+/* .iconos-rrss i{
   animation-name: gira;
   animation-duration: 10s;
   animation-delay: 2s;
@@ -409,12 +410,15 @@ footer i{
   }to{
     transform:rotate(360deg);
   }
-}
+} */
 
 .iconos-rrss i:hover{
   animation:none;
-  scale: 1.2;
+  scale: 1.3;
 }
+
+
+
 
 
 @media (max-width: 992px){
