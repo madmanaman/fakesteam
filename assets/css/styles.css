@@ -16,6 +16,11 @@ body {
     background-color: #202020;
 }
 
+h2{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 /* header */
 .logo img{
     height: 30px;
@@ -118,9 +123,6 @@ main{
   color: white;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-main h2{
-  padding-bottom: 1rem;
-}
 /*GRID MAIN GAME*/
 .gridcont_2{
     display: grid;
@@ -207,7 +209,7 @@ main h2{
     color: rgb(29, 228, 10);
   
   }
-  hr{
+   hr{
     background-color: #7d7e83;
     width: 75%;
   }
